@@ -1,5 +1,6 @@
 .menu {
     background:#ccf2ff;
+    height: 80px;
 }
 
 .menuItems {
@@ -11,13 +12,20 @@
 
 .text {
     margin-right: 10px;
+    margin-top: auto;
 }
 
 .logoutButton {
     margin-right: 50px;
 }
 
-.logo {
-    margin-left: 80px;
+.logoMenu {
+    margin-left: 100px;
 }
 
+.logoMenu img{
+    height: 60px;
+    width: 60px;
+    align-self: center;
+    margin-top: auto;
+}
