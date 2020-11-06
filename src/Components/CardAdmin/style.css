@@ -1,0 +1,43 @@
+.cardAdmin {
+    width: 40rem;
+    margin-top: auto;
+    margin-left: 47rem;
+    margin-top: -110px;
+    height: 300px;
+}
+
+.cardTextsFirst {
+    margin-top: -5px;
+}
+
+.cardTexts {
+    margin-top: -10px;
+}
+
+.edit-in-place{
+    padding: 1px;
+}
+.edit-in-place:hover {
+    background: #fff;
+    border: 1px dotted #4d94ff;
+    padding: 0;
+}
+
+.cardHorasBaixo {
+    margin-top: -17px;
+}
+
+hr {
+    margin-top: 5px;
+}
+
+.cardHead {
+    background: #d1d1e0;
+    height: 50px;
+}
+
+.editIconUp {
+    margin-left: 35rem;
+    margin-top: -50px;
+}
+
