@@ -8,6 +8,13 @@
   align-content: flex-start;
 }
 
+.image_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .cardPicture{
   width: 18rem;
   align-self: start;

@@ -1,9 +1,9 @@
 import React  from 'react';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import './style.css';
 
-const CardImage = (image, title, description) => {
+const CardImage = ({ image, title, description, id }) => {
+
     return (
         <div className="galeria_Admin">
             <Card className="cardPicture">
@@ -11,8 +11,6 @@ const CardImage = (image, title, description) => {
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>{description}</Card.Text>
-                    <Button className="galeriaAdminBtnAdd" variant="outline-secondary">Editar</Button>
-                    <Button className="galeriaAdminBtnDel" variant="outline-secondary">Remover</Button>
                 </Card.Body>
             </Card>
         </div>

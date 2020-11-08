@@ -3,7 +3,7 @@ import { Button, FormGroup, FormControl, FormLabel } from 'react-bootstrap';
 import "./style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Axios from 'axios';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 //Formulário de Login do Administrador
 
@@ -13,18 +13,19 @@ export default function FormLoginAdmin() {
     
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    
+    const history = useHistory();
 
     //Funções 
 
     async function handleSubmit(event) {
         event.preventDefault();
         const response = await Axios.post("http://localhost:3333/sessions", {
-            email,password
+            email, password
         })
-        console.log(response);
         const token = response.data.token;
         localStorage.setItem("token", token);
-        <Link to="/Agenda_Admin" /> 
+        history.push('/Agenda_Admin');
     }
 
     return (

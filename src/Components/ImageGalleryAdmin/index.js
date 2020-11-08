@@ -1,36 +1,54 @@
-import React, { Component, useEffect, useState } from 'react';
-import Card from 'react-bootstrap/Card';
+import React, { useEffect, useState } from 'react';
 import CardImage from '../CardImages';
 import './style.css';
-import FirstGallery from '../../Assets/FirstGallery.jpg';
 import Axios from 'axios';
+import Button from 'react-bootstrap/Button';
 
 
 const ImageGalleryAdmin = () => {
         
     //Variáveis 
-    const [images, seImages] = useState("");
+    const [images, setImages] = useState("");
 
     //Funções  
 
-    useEffect(async () => {
-        images = await Axios.get("http://localhost:3333/images:path"), {
-            image, title, description
-        }
-    })
+    useEffect(() => {
+        fetchData();
+    }, [])
+
+    const fetchData = async () => {
+        const response = await Axios.get("http://localhost:3333/events",  { 
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+        });
+        console.log(response.data)
+        setImages(response.data);
+    }
+
+    const handleDelete = async (itemId) => {
+        await Axios.delete(`http://localhost:3333/events/${itemId}`,  { 
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('token')
+            }
+        });
+
+        setImages(images.filter(item => item.id !== itemId ))
+    }
 
     return (
         <div className="galeria_Admin">
-            <div>
-            {images.map((Item, index) => {
-                return (
-                    <CardImage className="cardPicture" key={index} image={Item.image} title={Item.title} description={Item.description} />
-                )
-            })}
+            <div className="image_container">
+                {images && images.map((Item, index) => {
+                    return (
+                        <div>
+                            <CardImage className="cardPicture" key={index} id={Item.id} image={Item.images.url} title={Item.title} description={Item.description} />
+                            <Button className="galeriaAdminBtnAdd" variant="outline-secondary">Editar</Button>
+                            <Button className="galeriaAdminBtnDel" variant="outline-secondary" onClick={() => handleDelete(Item.id)} >Remover</Button>
+                        </div>
+                    )
+                })}
             </div>
-            <Card className="cardPlus">
-                <Card.Img variant="top"  src={FirstGallery} />
-            </Card>
         </div>
     );
 }
