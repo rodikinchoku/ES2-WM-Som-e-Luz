@@ -1,0 +1,34 @@
+.galeria_Admin{
+  margin-left: 185px;
+  margin-top: 40px;
+  margin-bottom: 30px;;
+  margin-right: 114px;
+  max-width: 80rem;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.cardPicture{
+  width: 18rem;
+  align-self: start;
+  margin-top: 0.5rem;
+}
+
+.cardPlus {
+  width: 18rem;
+  align-self: start;
+  margin-top: 0.5rem;
+}
+
+.galeriaAdminBtnAdd{
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+  width: 6rem;
+}
+
+.galeriaAdminBtnDel{
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  width: 6rem;
+}
+

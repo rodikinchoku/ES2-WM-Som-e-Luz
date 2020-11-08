@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useRef } from 'react';
+import Form from 'react-bootstrap/Form';
 import './style.css';
 
 const EditInPlace = ({ value, onChangeValue}) => {
@@ -22,7 +23,7 @@ const EditInPlace = ({ value, onChangeValue}) => {
     }, [isEditing])
 
     if(isEditing) {
-        return <input type="text" defaultValue={value} ref={inputRef} onBlur={done} />
+        return <Form.Control  type="text" defaultValue={value} ref={inputRef} onBlur={done}/>
     }
 
     return <span onClick={edit} className='edit-in-place'>{value}</span>

@@ -22,54 +22,27 @@ const CardAdmin = () => {
     const edit = () => setIsEditing(true);
     const done = () => setIsEditing(false);
     
-    //Funções 
-    if(isEditing) {
-        return (
-            <Card border="secondary" className="cardAdmin" >
+    return (
+        <Card border="secondary" className="cardAdmin" >
             <Card.Header as="h5" className="cardHead">
                 Eventos
-                <Button variant="outline-primary" className="editIconUp" onClick={done}>
+                <Button variant="outline-primary" className="editIconUp"  onClick={isEditing ? done : edit}>
                     <FontAwesomeIcon icon={faEdit} />
                 </Button>
             </Card.Header>
-            <Card.Body>    
-                <Card.Title><EditInPlace value={name} onChangeValue={setName} /></Card.Title>
-                <Card.Text className="cardTextsFirst"><EditInPlace value={time} onChangeValue={setTime} /></Card.Text>
-                <Card.Text className="cardTexts"><EditInPlace value={local} onChangeValue={setLocal} /></Card.Text>
+            <Card.Body>
+                <Card.Title>{isEditing ?  <EditInPlace value={name} onChangeValue={setName} /> : name}</Card.Title>
+                <Card.Text className="cardTextsFirst">{isEditing ?  <EditInPlace value={time} onChangeValue={setTime} /> : time}</Card.Text>
+                <Card.Text className="cardTexts">{isEditing ?  <EditInPlace value={local} onChangeValue={setLocal} /> : local}</Card.Text>
             </Card.Body>
             <hr />
             <Card.Body className="cardHorasBaixo">
-                <Card.Title><EditInPlace value={name1} onChangeValue={setName1} /></Card.Title>
-                <Card.Text className="cardTextsFirst"><EditInPlace value={time1} onChangeValue={setTime1} /></Card.Text>
-                <Card.Text className="cardTexts"><EditInPlace value={local1} onChangeValue={setLocal1} /></Card.Text>
+                <Card.Title>{isEditing ?  <EditInPlace value={name1} onChangeValue={setName1} /> : name1}</Card.Title>
+                <Card.Text className="cardTextsFirst">{isEditing ?  <EditInPlace value={time1} onChangeValue={setTime1} /> : time1}</Card.Text>
+                <Card.Text className="cardTexts">{isEditing ?  <EditInPlace value={local1} onChangeValue={setLocal1} /> : local1}</Card.Text>
             </Card.Body>
         </Card>
-        );
-    }
-    else{
-        return (
-            <Card border="secondary" className="cardAdmin" >
-                <Card.Header as="h5" className="cardHead">
-                    Eventos
-                    <Button variant="outline-primary" className="editIconUp" onClick={edit}>
-                        <FontAwesomeIcon icon={faEdit} />
-                    </Button>
-                </Card.Header>
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text className="cardTextsFirst">{time}</Card.Text>
-                    <Card.Text className="cardTexts">{local}</Card.Text>
-                </Card.Body>
-                <hr />
-                <Card.Body className="cardHorasBaixo">
-                    <Card.Title>{name1}</Card.Title>
-                    <Card.Text className="cardTextsFirst">{time1}</Card.Text>
-                    <Card.Text className="cardTexts">{local1}</Card.Text>
-                </Card.Body>
-            </Card>
-        );
-    }
-    
+    );
 }
 
 export default CardAdmin;
