@@ -1,41 +1,41 @@
 .galeria_Admin{
-  margin-left: 185px;
+  margin-left: auto;
   margin-top: 40px;
   margin-bottom: 30px;;
-  margin-right: 114px;
+  margin-right: auto;
   max-width: 80rem;
-  align-items: flex-start;
-  align-content: flex-start;
 }
 
 .image_container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  align-content: center;
+  width: 80rem;
 }
 
 .cardPicture{
   width: 18rem;
-  align-self: start;
-  margin-top: 0.5rem;
-}
-
-.cardPlus {
-  width: 18rem;
-  align-self: start;
-  margin-top: 0.5rem;
+  min-height: 26rem;
+  align-content: center;
+  margin: 0.5rem 0.5rem;
 }
 
 .galeriaAdminBtnAdd{
-  margin-left: 1rem;
-  margin-right: 0.5rem;
-  width: 6rem;
-}
-
-.galeriaAdminBtnDel{
+  width: 9rem;
+  margin-top: -3.1rem;
   margin-left: 0.5rem;
-  margin-right: 1rem;
-  width: 6rem;
 }
 
+.galeriaAdminBtnDell{
+  width: 9rem;
+  margin-top: -3.1rem;
+  margin-right: -0.5rem;
+}
+
+
+.addImageBtn{
+  float: right;
+  margin-top: -10px;
+  margin-right: 5rem;
+}

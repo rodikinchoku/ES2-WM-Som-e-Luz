@@ -2,4 +2,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 7rem;
+}
+
+.textAddImageGallery {
+    margin-left: 150px;
+    margin-top: 40px;
+    font: Helvetica;
+}
+
+.adicionaArquivo {
+  margin-bottom: 10px;
+}
+
+.newEventImageText {
+  font-size: 30px;
+}
+
+.Voltar {
+    float: right;
+    margin-top: -10px;
+    margin-right: 5rem;
 }

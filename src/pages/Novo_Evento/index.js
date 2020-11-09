@@ -3,6 +3,8 @@ import Menu  from '../../Components/Menu';
 import Axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import { Button, FormGroup, FormControl, FormLabel } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons';
 
 import './style.css';
 
@@ -40,17 +42,21 @@ export const Novo_Evento = () => {
   return (
     <Fragment>
       <Menu />
+      <h1 className="textAddImageGallery">Adicionar novo Evento</h1>
+      <Button  className="Voltar" variant="outline-info" onClick={() => history.push('/Galeria_de_Fotos_Admin')}>  
+                <FontAwesomeIcon icon={faArrowAltCircleLeft} size="2x" />
+      </Button>
       <div className="form">
         <form onSubmit={handleSubmit}>
           <FormGroup controlId="title" >
-            <FormLabel>Titulo</FormLabel>
+            <FormLabel className="newEventImageText">Título</FormLabel>
             <FormControl autoFocus type="text" value={title} onChange={e => setTitle(e.target.value)} />
           </FormGroup>
           <FormGroup controlId="description" >
-            <FormLabel>Descrição</FormLabel>
+            <FormLabel className="newEventImageText" >Descrição</FormLabel>
             <FormControl type="text" value={description} onChange={e => setDescription(e.target.value)} />
           </FormGroup>
-          <input type="file" ref={el} onChange={e => handleChange(e)} />
+          <input className="adicionaArquivo" type="file" ref={el} onChange={e => handleChange(e)} />
           <Button block type="submit">
             Criar Evento
           </Button>
