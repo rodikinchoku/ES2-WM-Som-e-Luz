@@ -14,10 +14,10 @@ const CardImage = ({ image, title, description, id , value}) => {
                 <Card.Img variant="top" src={image} />
                 <Card.Body>
                     <Card.Title>
-                        {value == true ?  <EditInPlace value={title1} onChangeValue={setTitle1} /> : title1}  
+                        {value === true ?  <EditInPlace value={title1} onChangeValue={setTitle1} /> : title1}  
                     </Card.Title>
                     <Card.Text>
-                        {value == true ?  <EditInPlace value={description1} onChangeValue={setDescription1} /> :  description1}
+                        {value === true ?  <EditInPlace value={description1} onChangeValue={setDescription1} /> :  description1}
                     </Card.Text>
                 </Card.Body>
             </Card>
