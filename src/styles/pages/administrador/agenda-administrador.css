@@ -1,0 +1,178 @@
+#page-agenda-administrador {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    position: relative;
+
+    z-index: 5;
+}
+
+#page-agenda-administrador .selecionar-data-agenda-administrador {
+    height: 100%;
+    max-height: 4rem;
+    width: 100%;
+    max-width: 71rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    position: absolute;
+    top: 14.3rem;
+    left: 17rem;
+}
+
+#page-agenda-administrador .selecionar-data-agenda-administrador p {
+    font-size: 25px;
+
+    margin-right: 2rem;
+}
+
+#page-agenda-administrador .cards-eventos-agenda-administrador {
+    height: 100%;
+    width: 100%;
+    max-height: 25rem;
+    max-width: 71rem;
+
+    position: absolute;
+
+    bottom: 1.6rem;
+    right: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+#page-agenda-administrador .card-eventos-agenda-administrador {
+    width: 100%;
+    max-width: 20rem;
+    height: 100%;
+    max-height: 20rem;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 6px;
+    border: 1px solid #606163;
+
+    position: relative;
+}
+
+
+#page-agenda-administrador .header-card-eventos-administrador {
+    width: 100%;
+    max-width: 30rem;
+    height: 100%;
+    max-height: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: 0;
+
+    border-radius: 6px;
+
+    background: #e1e3e8;
+}
+
+#page-agenda-administrador .header-card-eventos-administrador h1 {
+    color: #282d36;
+}
+
+#page-agenda-administrador .header-card-eventos-administrador hr {
+    width: 100%;
+    max-width: 30rem;
+
+    margin-top: -3px;
+
+    border: 2px solid #606163;
+}
+
+#page-agenda-administrador .edit-card-eventos-administrador {
+    width: 100%;
+    max-width: 20rem;
+    height: 100%;
+    max-height: 3rem;
+    
+    position: absolute;
+    top: 3rem;
+}
+
+
+#page-agenda-administrador .btn-edit-card-eventos-administrador {
+    width: 100%;
+    max-width: 6rem;
+    height: 100%;
+    max-height: 2rem;
+
+    border-radius: 3px;
+    border: 1px solid #45b4e4;
+
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFF;
+    background: #45b4e4;
+
+    transition: background-color 0.2s;
+}
+
+#page-agenda-administrador .btn-edit-card-eventos-administrador:hover {
+    background: #5cc9f9;
+}
+
+#page-agenda-administrador .edit-card-eventos-administrador span {
+    margin-right: 0.5rem;
+}
+
+
+
+#page-agenda-administrador .content-card-eventos-administrador {
+    width: 100%;
+    max-width: 20rem;
+    height: 100%;
+    max-height: 14rem;
+
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+    justify-content: center;
+
+    border-radius: 6px;
+}
+
+#page-agenda-administrador .content-card-eventos-administrador strong {
+    font-size: 30px;
+
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    color: #282d36;
+}
+
+#page-agenda-administrador .content-card-eventos-administrador span {
+    font-size: 20px;
+    flex-wrap: wrap;
+
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+
+    color: #282d36;
+}
+

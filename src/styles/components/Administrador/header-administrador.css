@@ -1,0 +1,71 @@
+#component-header-administrador {
+    width: 100%;
+    min-width: 68.9rem;
+    height: 100%;
+    max-height: 8rem;
+    
+    margin-top: 1rem;
+    margin-left: 2rem;
+
+    position: relative;
+
+    color: #4b4c4e;
+}
+
+#component-header-administrador .header-administrador-texto h1{
+    font-size: 50px;
+}
+
+#component-header-administrador .header-administrador-texto p{
+    position: absolute;
+
+    font-size: 20px;
+
+    bottom: 0;
+}
+
+#component-header-administrador .header-btn-logout-administrador{
+    width: 7rem;
+    height: 2.5rem;
+
+
+    position: absolute;
+    right: 0;
+    top: 0.7rem;
+}
+
+#component-header-administrador .header-btn-logout-administrador button{
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5px;
+    border: 1px solid #4b95f0;
+   
+    font-family: Nunito, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    
+    background: #2563b0;
+    color: #FFF;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    transition: background-color 0.2s;
+}
+
+#component-header-administrador .header-btn-logout-administrador button:hover{
+    background: #4990eb;
+}
+
+#component-header-administrador .header-btn-logout-administrador span{
+    position: absolute;
+    left: 0.5rem;
+}
+
+#component-header-administrador .icon-btn-header-administrador {
+    position: absolute;
+    right: 0.5rem;
+}
