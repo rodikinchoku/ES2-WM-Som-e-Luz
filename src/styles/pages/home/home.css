@@ -1,0 +1,12 @@
+#page-home {
+    width: 100vw;
+
+    color: #252424;
+}
+
+#page-home .content-page-home {
+    width: 100vw;
+    height: 100vh;
+
+    background: cornflowerblue;
+}

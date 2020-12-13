@@ -51,8 +51,8 @@ class PopupGaleriaAdministrador extends Component  {
     render(){
 
         return (
-            <div id='component-galeria-popup-administrador'>
-                <div id='popup-galeria-inner-administrador'>
+            <div id="component-galeria-popup-administrador">
+                <div id="popup-galeria-inner-administrador">
                     <div className="header-popup-galeria-administrador">
                         <h1>{this.props.name}</h1>
                     </div>

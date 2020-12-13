@@ -1,0 +1,53 @@
+#component-rodape-home {
+    width: 100vw;
+    height: 30vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: #faf6f6;
+}
+
+#component-rodape-home .content-component-rodape-home {
+    width: 100vw;
+    height: 30vh;
+
+    margin-top: 7vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-component-rodape-home .logo-content-component-rodape-home {
+    width: 7vw;
+    height: 12vh;
+}
+
+.content-component-rodape-home .logo-content-component-rodape-home img {
+    width: 7vw;
+    height: 12vh;
+}
+
+#component-rodape-home .content-component-rodape-home p {
+    margin-top: 3vh;
+
+    font-size: 15px;
+    font-weight: 100;
+}
+
+@media screen and (max-width: 960px) {
+
+    .content-component-rodape-home .logo-content-component-rodape-home {
+        width: 15vw;
+        height: 13vh;
+    }
+    
+    .content-component-rodape-home .logo-content-component-rodape-home img {
+        width: 15vw;
+        height: 13vh;
+    }
+}

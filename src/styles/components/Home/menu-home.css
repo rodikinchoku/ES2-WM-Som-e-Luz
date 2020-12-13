@@ -1,0 +1,260 @@
+#component-menu-home {
+    width: 100%;
+    max-width: 100vw;
+    height: 100%;
+    max-height: 13vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    position: fixed;
+    z-index: 50;
+}
+
+.navbar {
+    background: transparent;
+}
+
+.navbar.active {
+    background:#f5f5f5;
+}
+
+#component-menu-home .icon-component-menu-home {
+    display: none;
+}
+
+#component-menu-home .active-content-component-menu-home {
+    width: 100vw;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    list-style: none;
+}
+
+#component-menu-home .active-content-component-menu-home .logo-component-menu-home {
+    width: 100%;
+    max-width: 6vw;
+    height: 100%;
+    max-height: 11vh;
+
+    margin-top: 1rem;
+    margin-left: 5rem;
+}
+
+#component-menu-home .active-content-component-menu-home .logo-component-menu-home img {
+    width: 100%;
+    max-width: 6vw;
+    height: 100%;
+    max-height: 11vh;
+}
+
+#component-menu-home .active-content-component-menu-home .items-content-component-menu-home {
+    width: 100%;
+    max-width: 60vw;
+    height: 100%;
+    max-height: 13vh;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+}
+
+#component-menu-home .active-content-component-menu-home .items-content-component-menu-home .item-content-component-menu-home {
+    margin-right: 2rem;
+}
+
+#component-menu-home .active-content-component-menu-home .items-content-component-menu-home .item-content-component-menu-home span {
+    font-size: 20px;
+
+    color: #3f4f57;
+}
+
+#component-menu-home .active-content-component-menu-home .items-content-component-menu-home .item-content-component-menu-home:hover {
+    text-decoration: underline;
+    text-decoration-color: #3f4f57;
+}
+
+#component-menu-home .active-content-component-menu-home .active-login-signup-component-menu-home {
+    width: 100%;
+    max-width: 9vw;
+    height: 100%;
+    max-height: 8vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#component-menu-home .active-content-component-menu-home .active-login-button-content-component-menu-home {
+    width: 7vw;
+    height: 5vh;
+
+
+    border: 1px solid #23a3cb;
+    border-radius: 4px;
+
+    color: #fff;
+    background: #23a3cb;
+
+    transition: background-color 0.2s;
+}
+
+#component-menu-home  .active-content-component-menu-home .active-login-button-content-component-menu-home:hover {
+    background: #3eaccf
+}
+
+@media screen and (max-width: 960px) {
+
+    #component-menu-home {
+        width: 60vw;
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+
+        position: fixed;
+    }
+
+    .navbar.active {
+        background:transparent;
+    }
+
+    #component-menu-home .content-component-menu-home {
+        width: 100%;
+        min-height: 100vh;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        margin-top: 0;
+        margin-left: 0;
+    
+        background: #fefefe;
+    }
+
+    #component-menu-home .content-component-menu-home .icon-component-menu-home {
+        display: block;
+        
+        font-size: 1.8rem;
+        cursor: pointer;
+    
+        z-index: 10;
+
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+    }
+
+    #component-menu-home .content-component-menu-home .logo-component-menu-home {
+        width: 13vw;
+        height: 9vh;
+    
+        margin-top: 3rem;
+        margin-left: 2rem;
+    }
+
+    #component-menu-home .content-component-menu-home .items-content-component-menu-home {
+        width: 100%;
+        height: 32vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        margin-top: 10vh;
+        margin-left: 0rem;
+    }
+
+    #component-menu-home .content-component-menu-home .items-content-component-menu-home .item-content-component-menu-home {
+        margin-top: 2rem;
+        margin-left: 0.5rem;
+        
+        font-size: 20px;
+
+        color: #3f4f57;
+    }
+
+    #component-menu-home .content-component-menu-home .items-content-component-menu-home .item-content-component-menu-home:hover {
+       text-decoration: none;
+    }
+
+    #component-menu-home .content-component-menu-home .mobile-login-signup-component-menu-home {
+        width: 100%;
+        height: 5vh;
+
+        margin-top: 25vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }   
+
+    #component-menu-home .content-component-menu-home .mobile-login-signup-component-menu-home .mobile-login-button-content-component-menu-home {
+        width: 25vw;
+        height: 100%;
+        height: 5vh;
+
+
+        border: 2px solid #7ab1df;
+        border-radius: 6px;
+
+        color: #3f4f57;
+
+        background: #fefefe;
+    }
+
+    #component-menu-home .content-component-menu-home .mobile-login-signup-component-menu-home .mobile-login-button-content-component-menu-home:hover {
+        border-color: #4583b6;
+
+        color: #4583b6;
+
+        text-decoration: underline;
+        text-decoration-color: #4583b6;
+    }
+
+    #component-menu-home .active-content-component-menu-home {
+        width:  25%;
+        height: 10%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        left: 0;
+    }
+
+    #component-menu-home .active-content-component-menu-home .icon-component-menu-home{
+        display: block;
+        
+        font-size: 1.8rem;
+        cursor: pointer;
+    
+        z-index: 10;
+    }
+
+    #component-menu-home .active-content-component-menu-home .logo-component-menu-home {
+        display: none;
+    }
+
+    #component-menu-home .active-content-component-menu-home .items-content-component-menu-home {
+        display: none;
+    }
+
+    #component-menu-home .active-content-component-menu-home .mobile-login-signup-component-menu-home {
+        display: none;
+    }
+}

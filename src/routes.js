@@ -8,7 +8,17 @@ import AgendaAdministrador from './pages/Administrador/AgendaAdministrador';
 import GaleriaFotosAdministrador from './pages/Administrador/GaleriaFotosAdministrador';
 import ServicosAdministrador from './pages/Administrador/ServicosAdministrador';
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
+import Home from './pages/Home/Home';
+import Sobre from './pages/Home/Sobre';
+import Eventos from './pages/Home/Eventos';
+import Servicos from './pages/Home/Servicos';
+import Contato from './pages/Home/Contato';
+
+import ScrollToTop from './components/Home/Scroll/ScrollToTop';
+
+import LoginSignup from './pages/Home/Login-SignUp';
+
+const PrivateRouteAdmin = ({ component: Component, ...rest }) => (
     <Route
       {...rest}
       render={props =>
@@ -24,11 +34,18 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 const Routes =() => {
     return (
         <BrowserRouter>
+            <ScrollToTop />
             <Switch>
                 <Route path="/admin" component={LoginAdministrador} />
-                <PrivateRoute path="/agenda-admin" component={AgendaAdministrador} />
-                <PrivateRoute path="/galeria-de-fotos-admin" component={GaleriaFotosAdministrador} />
-                <PrivateRoute path="/servicos-admin" component={ServicosAdministrador} />
+                <PrivateRouteAdmin path="/agenda-admin" component={AgendaAdministrador} />
+                <PrivateRouteAdmin path="/galeria-de-fotos-admin" component={GaleriaFotosAdministrador} />
+                <PrivateRouteAdmin path="/servicos-admin" component={ServicosAdministrador} />
+                <Route exact path="/" component={Home} />
+                <Route path="/sobre-nos" component={Sobre} />
+                <Route path="/eventos-realizados" component={Eventos} />
+                <Route path="/servicos-oferecidos" component={Servicos} />
+                <Route path="/contato" component={Contato} />
+                <Route path="/login-signup" component={LoginSignup} />
                 <Route path="*" component={() => <h1>Page not found</h1>} />
             </Switch>
         </BrowserRouter>

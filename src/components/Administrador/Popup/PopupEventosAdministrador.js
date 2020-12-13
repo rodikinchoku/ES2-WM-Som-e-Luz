@@ -8,8 +8,8 @@ class PopupEventosAdministrador extends Component  {
     render(){
 
         return (
-            <div id='component-popup-eventos-administrador'>
-                <div id='popup-eventos-inner-administrador'>
+            <div id="component-popup-eventos-administrador">
+                <div id="popup-eventos-inner-administrador">
                     <div className="header-popup-eventos-inner-administrador">
                         <h1>Editar informações</h1>
                     </div>

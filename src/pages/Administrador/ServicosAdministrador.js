@@ -5,7 +5,9 @@ import '../../styles/pages/administrador/servicos-administrador.css';
 
 import MenuAdministrador from '../../components/Administrador/Menu/MenuAdministrador';
 import HeaderAdministrador from '../../components/Administrador/Header/HeaderAdministrador';
-import PopupServicosAdministrador from '../../components/Administrador/Popup/PopupServicosAdministrador';
+import PopupAdicionarServicosAdministrador from '../../components/Administrador/Popup/PopupAdicionarServicosAdministrador';
+import PopupEditarServicosAdministrador from '../../components/Administrador/Popup/PopupEditarServicosAdministrador';
+
 
 
 class ServicosAdministrador extends Component{
@@ -14,14 +16,19 @@ class ServicosAdministrador extends Component{
     constructor() {
         super();
         this.state = {  
-            showPopup: false,    
+            showPopupAdd: false,
+            showPopupEdit: false,    
         };
     }
 
     //Funções 
 
-    togglePopup() {
-        this.setState({ showPopup: !this.state.showPopup });
+    togglePopupAdd() {
+        this.setState({ showPopupAdd: !this.state.showPopupAdd });
+    }
+
+    togglePopupEdit() {
+        this.setState({ showPopupEdit: !this.state.showPopupEdit });
     }
 
 
@@ -38,12 +45,12 @@ class ServicosAdministrador extends Component{
                 </div> 
 
                 <div className="adicionar-servicos-administrador">
-                    <button className="btn-adicionar-servicos-administrador" onClick={this.togglePopup.bind(this)}>
+                    <button className="btn-adicionar-servicos-administrador" onClick={this.togglePopupAdd.bind(this)}>
                         <span>Adicionar serviços</span>
                         <FaTools />
                     </button>
-                    {this.state.showPopup ? 
-                        <PopupServicosAdministrador name="Adicionar Evento" closePopup={this.togglePopup.bind(this)} /> : null 
+                    {this.state.showPopupAdd ? 
+                        <PopupAdicionarServicosAdministrador closePopup={this.togglePopupAdd.bind(this)} /> : null 
                     }
                 </div>
                 
@@ -61,10 +68,10 @@ class ServicosAdministrador extends Component{
                                 <td>Som</td>
                                 <td>500</td>
                                 <td>
-                                    <button className="edit-btn-content-servicos-administrador" onClick={this.togglePopup.bind(this)}>
+                                    <button className="edit-btn-content-servicos-administrador" onClick={this.togglePopupEdit.bind(this)}>
                                         <span>Editar</span>
-                                        {this.state.showPopup ? 
-                                            <PopupServicosAdministrador name="Editar Evento" closePopup={this.togglePopup.bind(this)} /> : null 
+                                        {this.state.showPopupEdit ? 
+                                            <PopupEditarServicosAdministrador closePopup={this.togglePopupEdit.bind(this)} /> : null 
                                         }
                                     </button>
                                    
@@ -75,12 +82,15 @@ class ServicosAdministrador extends Component{
                             </tr>
                             <tr>
                                 <td>Luz</td>
-                                <td>300</td>
+                                <td>200</td>
                                 <td>
-                                    <button className="edit-btn-content-servicos-administrador" onClick={this.togglePopup.bind(this)}>
+                                    <button className="edit-btn-content-servicos-administrador" onClick={this.togglePopupEdit.bind(this)}>
                                         <span>Editar</span>
+                                        {this.state.showPopupEdit ? 
+                                            <PopupEditarServicosAdministrador closePopup={this.togglePopupEdit.bind(this)} /> : null 
+                                        }
                                     </button>
-                                    
+                                   
                                     <button className="delete-btn-content-servicos-administrador">
                                         <span>Remover</span>
                                     </button>
