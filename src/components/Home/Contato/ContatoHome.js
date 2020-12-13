@@ -12,18 +12,21 @@ const ContatoHome = () => {
 
             <div className="content-component-contato-home">
                 <div className="info-content-component-contato-home">
-                    <p className="text-info-content-component-contato-home">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                    <p className="text-info-content-component-contato-home">
+                    Vai fazer uma festa e quer uma cotação? Basta preencher o Formulário ao lado que nosso time entrará em contato com você o mais breve possível.<br />
+                    Com a WM, a sua festa será inesquecível!
+                    </p>
                     <div className="item-info-content-component-contato-home">
                         <FaPhoneSquare className="icon-item-info-content-component-contato-home"/>
-                        <span className="text-item-info-content-component-contato-home">Telefone</span>
+                        <a className="text-item-info-content-component-contato-home" href="tel:(15)99116-3093">(15)99116-3093</a>
                     </div>
                     <div className="item-info-content-component-contato-home">
                         <FaEnvelopeSquare className="icon-item-info-content-component-contato-home"/>
-                        <span className="text-item-info-content-component-contato-home">Email</span>
+                        <a className="text-item-info-content-component-contato-home" href="mailto:contato@wmsomeluz.com.br">contato@wmsomeluz.com.br</a>
                     </div>
                     <div className="item-info-content-component-contato-home">
                         <FaFacebookSquare className="icon-item-info-content-component-contato-home"/>
-                        <span className="text-item-info-content-component-contato-home">Redes Sociais</span>
+                        <a className="text-item-info-content-component-contato-home" href="https://www.facebook.com/wm.som.luz">/wm.som.luz</a>
                     </div>
                 </div>
                 <div className="form-content-component-contato-home">

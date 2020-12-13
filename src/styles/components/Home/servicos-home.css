@@ -12,14 +12,14 @@
     width: 100%;
     height: 10vh;
 
-    margin-top: 15vh;
+    margin-top: 5vh;
     
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#component-servicos-home .header-component-servicos-home h1{
+#component-servicos-home .header-component-servicos-home h2{
     font-size: 3rem;
 
     color: #1d618f;
@@ -61,7 +61,7 @@
     background: white;
 }
 
-.content-left-component-servicos-home .texto-content-left-component-servicos-home h2 { 
+.content-left-component-servicos-home .texto-content-left-component-servicos-home h3 { 
     margin-top: 5vh;
     font-size: 2.5rem;
 
@@ -104,8 +104,6 @@
 .content-right-component-servicos-home .imagem-content-right-component-servicos-home {
     width: 45vw;
     height: 100%;
-
-    background: chocolate;
 }
 
 .content-right-component-servicos-home .texto-content-right-component-servicos-home {
@@ -125,7 +123,7 @@
     z-index: 5;
 }
 
-.content-right-component-servicos-home .texto-content-right-component-servicos-home h2 { 
+.content-right-component-servicos-home .texto-content-right-component-servicos-home h3 { 
     margin-top: 5vh;
     font-size: 2.5rem;
 

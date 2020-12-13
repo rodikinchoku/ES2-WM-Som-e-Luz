@@ -14,10 +14,4 @@ export const MenuAdministradorData = [
         icon: <FaImages />,
         cName: 'content-menu-administrador'
     },
-    {
-        title: 'Serviços',
-        path: '/servicos-admin',
-        icon: <FaWrench />,
-        cName: 'content-menu-administrador'
-    }
 ]

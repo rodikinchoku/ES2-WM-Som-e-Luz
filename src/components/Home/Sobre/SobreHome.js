@@ -2,6 +2,8 @@ import React from 'react';
 
 import '../../../styles/components/Home/sobre-home.css';
 
+import sobreImg from '../../../images/sobre.jpg';
+
 const SobreHome = () => {
     return (
         <div id="component-sobre-nos-home">
@@ -11,12 +13,9 @@ const SobreHome = () => {
 
             <div className="content-component-sobre-nos-home">
                 <div className="texto-content-component-sobre-nos-home">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                A WM Som e Luz é uma empresa de sonorização e iluminação para eventos e festas que está no mundo da música, eventos e festas mais de 30 anos.  O nosso objetivo é garantir que o sua festa dos sonhos se torne realidade e poder contribuir com isto é o que nos dá motivação!
                 </div>
-                <div className="image-content-component-sobre-nos-home">
-                    p
-                </div>
-                
+                <img src={sobreImg} alt="" className="image-content-component-sobre-nos-home"/>
             </div>
         </div>
     );

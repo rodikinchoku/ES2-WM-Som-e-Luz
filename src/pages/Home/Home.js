@@ -9,13 +9,14 @@ import EventosHome from '../../components/Home/Eventos Realizados/EventosHome';
 import ContatoHome from '../../components/Home/Contato/ContatoHome';
 import RodapeHome from '../../components/Home/Rodape/RodapeHome';
 
-
-
 const Home = () => {
     return (
         <div id="page-home">
             <MenuHome />
-            <div className="content-page-home">a</div>
+            <div className="content-page-home">
+                
+            </div>
+            <h1>Seja bem vindo à  WM Som e Luz !</h1>
             <ServicosHome />
             <SobreHome />
             <EventosHome />

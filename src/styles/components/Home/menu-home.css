@@ -14,7 +14,7 @@
 }
 
 .navbar {
-    background: transparent;
+    background:#f5f5f5;
 }
 
 .navbar.active {
@@ -95,24 +95,6 @@
     justify-content: space-around;
 }
 
-#component-menu-home .active-content-component-menu-home .active-login-button-content-component-menu-home {
-    width: 7vw;
-    height: 5vh;
-
-
-    border: 1px solid #23a3cb;
-    border-radius: 4px;
-
-    color: #fff;
-    background: #23a3cb;
-
-    transition: background-color 0.2s;
-}
-
-#component-menu-home  .active-content-component-menu-home .active-login-button-content-component-menu-home:hover {
-    background: #3eaccf
-}
-
 @media screen and (max-width: 960px) {
 
     #component-menu-home {
@@ -126,6 +108,10 @@
     }
 
     .navbar.active {
+        background:transparent;
+    }
+
+    .navbar {
         background:transparent;
     }
 
@@ -201,28 +187,6 @@
         align-items: center;
     }   
 
-    #component-menu-home .content-component-menu-home .mobile-login-signup-component-menu-home .mobile-login-button-content-component-menu-home {
-        width: 25vw;
-        height: 100%;
-        height: 5vh;
-
-
-        border: 2px solid #7ab1df;
-        border-radius: 6px;
-
-        color: #3f4f57;
-
-        background: #fefefe;
-    }
-
-    #component-menu-home .content-component-menu-home .mobile-login-signup-component-menu-home .mobile-login-button-content-component-menu-home:hover {
-        border-color: #4583b6;
-
-        color: #4583b6;
-
-        text-decoration: underline;
-        text-decoration-color: #4583b6;
-    }
 
     #component-menu-home .active-content-component-menu-home {
         width:  25%;

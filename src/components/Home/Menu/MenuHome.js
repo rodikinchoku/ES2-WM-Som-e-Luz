@@ -9,26 +9,10 @@ import MenuLogoHome from '../../../images/logo.png';
 function MenuHome() {
 
     const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
     const [navbar, setNavbar] = useState(false);
 
     const handleclick = () => setClick(!click);
     const closeMobileMenu = () => setClick(false);
-
-    const showButton = () => {
-        if(window.innerWidth <= 960) {
-            setButton(false);
-        }
-        else {
-            setButton(true);
-            setClick(false);
-        }
-    }
-
-    useEffect(() => {
-        showButton();
-        window.addEventListener('resize', showButton);
-    }, []);
 
     const changeNavBackground = () => {
         if(window.scrollY >= 106) {
@@ -66,20 +50,6 @@ function MenuHome() {
                     <Link to="/contato" style={{textDecoration: "none"}} onClick={closeMobileMenu}>
                         <li className="item-content-component-menu-home"><span>Contato</span></li>
                     </Link>
-
-                    {button ? 
-                        <div className="active-login-signup-component-menu-home">
-                            <Link to="/login-signup">
-                                <button href="/login-signup" className="active-login-button-content-component-menu-home">Login</button>
-                            </Link>
-                        </div>
-                    :
-                        <div className="mobile-login-signup-component-menu-home">
-                            <Link to="/login-signup">
-                                <button href="/login-signup" className="mobile-login-button-content-component-menu-home" onClick={closeMobileMenu}>Login</button>
-                            </Link>
-                        </div>
-                    }  
 
                 </div>
                     

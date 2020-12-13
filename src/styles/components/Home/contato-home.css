@@ -77,8 +77,17 @@
 .info-content-component-contato-home .text-item-info-content-component-contato-home {
     font-size: 30px;
     font-weight: 400;
+
+    text-decoration: none;
+
+    color: #252424;
 }
 
+.info-content-component-contato-home .text-item-info-content-component-contato-home:hover {
+    text-decoration: underline;
+    text-decoration-color: #252424;
+
+}
 #component-contato-home .form-content-component-contato-home {
     width: 40vw;
     height: 60vh;

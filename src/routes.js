@@ -6,7 +6,6 @@ import { isAuthenticated } from './services/auth';
 import LoginAdministrador from './pages/Administrador/LoginAdministrador';
 import AgendaAdministrador from './pages/Administrador/AgendaAdministrador';
 import GaleriaFotosAdministrador from './pages/Administrador/GaleriaFotosAdministrador';
-import ServicosAdministrador from './pages/Administrador/ServicosAdministrador';
 
 import Home from './pages/Home/Home';
 import Sobre from './pages/Home/Sobre';
@@ -15,8 +14,6 @@ import Servicos from './pages/Home/Servicos';
 import Contato from './pages/Home/Contato';
 
 import ScrollToTop from './components/Home/Scroll/ScrollToTop';
-
-import LoginSignup from './pages/Home/Login-SignUp';
 
 const PrivateRouteAdmin = ({ component: Component, ...rest }) => (
     <Route
@@ -29,7 +26,7 @@ const PrivateRouteAdmin = ({ component: Component, ...rest }) => (
         )
       }
     />
-  );
+);
 
 const Routes =() => {
     return (
@@ -39,13 +36,11 @@ const Routes =() => {
                 <Route path="/admin" component={LoginAdministrador} />
                 <PrivateRouteAdmin path="/agenda-admin" component={AgendaAdministrador} />
                 <PrivateRouteAdmin path="/galeria-de-fotos-admin" component={GaleriaFotosAdministrador} />
-                <PrivateRouteAdmin path="/servicos-admin" component={ServicosAdministrador} />
                 <Route exact path="/" component={Home} />
                 <Route path="/sobre-nos" component={Sobre} />
                 <Route path="/eventos-realizados" component={Eventos} />
                 <Route path="/servicos-oferecidos" component={Servicos} />
                 <Route path="/contato" component={Contato} />
-                <Route path="/login-signup" component={LoginSignup} />
                 <Route path="*" component={() => <h1>Page not found</h1>} />
             </Switch>
         </BrowserRouter>
