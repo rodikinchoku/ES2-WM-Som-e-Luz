@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios'
+import api from '../../../services/api';
 
 import '../../../styles/components/Administrador/image-card-administrador.css';
 
@@ -7,6 +7,7 @@ import PopupGaleriaAdministrador from '../Popup/PopupGaleriaAdministrador';
 
 
 class ImageCardAdministrador extends Component {
+    
     //Variáveis 
 
     constructor() {
@@ -24,14 +25,9 @@ class ImageCardAdministrador extends Component {
     }
 
     handleDelete = async (itemId) => {
-        await axios.delete(`http://localhost:3333/events/${itemId}`,  { 
-            headers: {
-                'Authorization': 'Bearer ' + localStorage.getItem('token')
-            }
-        });
-
-        this.props.images(this.props.images.filter(item => item.id !== itemId ))
+        await api.delete(`http://localhost:3333/events/${itemId}`);
     }
+
 
     render() {
         return (
@@ -39,13 +35,13 @@ class ImageCardAdministrador extends Component {
                 <div className="image-component-image-card-administrador">
                     <img src={this.props.image} alt="imagem"/>
                     <div className="overlay-btn-image-component-image-card-administrador">
-                        <button className="btn-image-component-image-card-administrador" onClick={this.togglePopup.bind(this)}>
+                        <button className="btn-image-component-image-card-administrador" onClick={() => this.togglePopup.bind(this)}>
                             <span>Editar</span>
                         </button>
                         {this.state.showPopup ? 
                             <PopupGaleriaAdministrador name="Editar Evento" title={this.props.title} description={this.props.description} image={this.props.image} closePopup={this.togglePopup.bind(this)} /> : null 
                         }
-                        <button className="btn-image-component-image-card-administrador" onClick={this.handleDelete(this.props.id)}>
+                        <button className="btn-image-component-image-card-administrador" onClick={() => this.handleDelete(this.props.id)}>
                             <span>Remover</span>
                         </button>
                     </div>

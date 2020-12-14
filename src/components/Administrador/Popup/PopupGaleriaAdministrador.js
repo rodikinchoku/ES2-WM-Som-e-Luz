@@ -17,21 +17,32 @@ class PopupGaleriaAdministrador extends Component  {
         };
         this.handleChangeTitulo = this.handleChangeTitulo.bind(this);
         this.handleChangeDescricao = this.handleChangeDescricao.bind(this);
-        this.handleChangeFile = React.createRef();
     }
 
     //Funções
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(this.state.file)
         const formData = new FormData();
-        formData.append('title', this.state.titulo);
-        formData.append('description', this.state.descricao);
-        formData.append('image', this.state.file); 
+        console.log(this.state)
+        const titulo = this.state.titulo;
+        const descricao = this.state.descricao;
+        const file = this.state.file;
+        formData.append('title', titulo);
+        formData.append('description', descricao);
+        formData.append('image', file); 
+
+        for(var pair of formData.entries()) {
+            console.log(pair[0]+ ', '+ pair[1]);
+         }
     
         await api.post("/events", formData, {
-        });
+            headers: {
+                "content-type": "multipart/form-data"
+            }
+        }
+        );
+        console.log(this.state.file)
       }
 
       handleChangeTitulo(event) {
@@ -42,11 +53,11 @@ class PopupGaleriaAdministrador extends Component  {
         this.setState({descricao: event.target.value});
       }
     
-      handleChangeFile = (e) => {
-        const file = e.target.files[0]; // accessing file
-        this.setState({file: file}); // storing file
-        console.log(this.state.file)
-      }
+      handleChange = (e) => {
+        this.setState({
+            [e.target.id] : e.target.value
+        })
+    }
 
     render(){
 
@@ -57,7 +68,7 @@ class PopupGaleriaAdministrador extends Component  {
                         <h1>{this.props.name}</h1>
                     </div>
                     <div className="content-popup-galeria-administrador">
-                        <form onSubmit={this.handleSubmit}>
+                        <form>
                             <div className="item-content-popup-galeria-administrador">
                                 <span>Título:</span>
                                 <input type="text" className="input-content-popup-galeria-administrador" placeholder={this.props.title ? this.props.title : "Título do evento"} value={this.state.titulo} onChange={this.handleChangeTitulo} />
@@ -67,12 +78,12 @@ class PopupGaleriaAdministrador extends Component  {
                                 <input type="text" className="input-content-popup-galeria-administrador" placeholder={this.props.description ? this.props.description : "Descrição do evento"} value={this.state.descricao} onChange={this.handleChangeDescricao}/>
                             </div>
                             <div className="item-content-popup-galeria-administrador">
-                                <input type="file"  className="input-image-content-popup-galeria-administrador" placeholder={this.props.image ? this.props.image : ""} ref={this.handleChangeFile} />
+                                <input type="file"  className="input-image-content-popup-galeria-administrador" id="file" placeholder={this.props.image ? this.props.image : ""} onChange={this.handleChange} />
                             </div>
                         </form>
                     </div>
                     <div className="footer-popup-galeria-administrador">
-                        <button type="submit" className="save-btn-popup-galeria-administrador" onClick={this.props.closePopup} >Salvar</button>
+                        <button type="submit"  onClick={(e) => this.handleSubmit(e)} className="save-btn-popup-galeria-administrador">Salvar</button>
                         <button className="close-btn-popup-galeria-administrador" onClick={this.props.closePopup}>Fechar</button>
                     </div>
                 </div>

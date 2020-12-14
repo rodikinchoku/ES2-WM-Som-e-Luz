@@ -9,7 +9,9 @@ import HeaderAdministrador from '../../components/Administrador/Header/HeaderAdm
 import PopupGaleriaAdministrador from '../../components/Administrador/Popup/PopupGaleriaAdministrador';
 import ImageCardAdministrador from '../../components/Administrador/ImageCard/ImageCardAdministrador';
 
-import ImageTeste from '../../images/teste.jpg';
+import fest1 from '../../images/festa_1_bd.jpg';
+import fest2 from '../../images/festa_2_bd.jpg';
+import fest3 from '../../images/festa_3_bd.jpg';
 
 class GaleriaFotosAdministrador extends Component{
 
@@ -27,6 +29,10 @@ class GaleriaFotosAdministrador extends Component{
 
     togglePopup() {
         this.setState({ showPopup: !this.state.showPopup });
+    }
+
+    async componentDidMount() {
+        await this.fetchData();
     }
 
     fetchData = async () => {
@@ -57,18 +63,9 @@ class GaleriaFotosAdministrador extends Component{
                 </div>
 
                 <div className="content-galeria-de-fotos-administrador">
-                    <ImageCardAdministrador image={ImageTeste} title="Teste" description="Teste"/>
-                    <ImageCardAdministrador image={ImageTeste} title="Teste" description="Teste"/>
-                    <ImageCardAdministrador image={ImageTeste} title="Teste" description="Teste"/>
-                    <ImageCardAdministrador image={ImageTeste} title="Teste" description="Teste"/>
-                    <ImageCardAdministrador image={ImageTeste} title="Teste" description="Teste"/>
-                    {this.state.images && this.state.images.map((item, index) => {
-                        return (
-                            <div>
-                                <ImageCardAdministrador key={index} id={item.id} image={item.images.url} title={item.title} description={item.description} />
-                            </div>
-                        )
-                    })}
+                    <ImageCardAdministrador image={fest1} title="Casamento Sorocaba" description="Som e iluminação com estrutura iglu em Sorocaba." />
+                    <ImageCardAdministrador image={fest2} title="Iluminação em Festa" description="Iluminação com moving heads e lasers." />
+                    <ImageCardAdministrador image={fest3} title="Casamento - Lusa" description="Festa de casamento no salão lusa." />
                 </div>
 
             </div>

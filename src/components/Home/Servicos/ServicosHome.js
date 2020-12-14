@@ -5,7 +5,7 @@ import '../../../styles/components/Home/servicos-home.css';
 import cerimonialImg from '../../../images/Cerimonialista.jpg';
 import paraSuaFestaImg from '../../../images/paraSuaFesta.jpg';
 import videoImg from '../../../images/Video.jpg';
-import SiImg from '../../../images/somEIluminacao.jpg';
+import SiImg from '../../../images/SomEIluminacao.jpg';
 
 const ServicosHome = () => {
     return (

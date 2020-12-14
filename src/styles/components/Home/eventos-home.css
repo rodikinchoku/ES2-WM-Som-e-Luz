@@ -38,3 +38,10 @@
     align-items: center;
     justify-content: center;
 }
+
+.content-component-eventos-home .carousel-content-component-eventos-home {
+    max-width: 55vw;
+    height: 40vh;
+
+    margin-top: 5vh;
+}

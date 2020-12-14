@@ -1,52 +1,56 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-
+import React, { Component } from 'react';
+import Carousel from 'nuka-carousel';
+import api from '../../../services/api';
 
 import '../../../styles/components/Home/eventos-home.css';
 
-const EventosHome = () => {
-    return (
-        <div id="component-eventos-home">
-            <div className="header-component-eventos-home">
-                <h1>Eventos Realizados</h1>
-            </div>
+import fest1 from '../../../images/festa_1_bd.jpg';
+import fest2 from '../../../images/festa_2_bd.jpg';
+import fest3 from '../../../images/festa_3_bd.jpg';
 
-            <div className="content-component-eventos-home">
-                <Carousel>
-                    <Carousel.Item>
-                        <img
-                        className="d-block w-100"
-                        src="holder.js/800x400?text=First slide&bg=373940"
-                        alt="First slide"
-                        />
-                        <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                        className="d-block w-100"
-                        src="holder.js/800x400?text=Second slide&bg=282c34"
-                        alt="Third slide"
-                        />
+class EventosHome extends Component{
 
-                        <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                        <Carousel.Item>
-                            <img className="d-block w-100" src="holder.js/800x400?text=Third slide&bg=20232a" alt="Third slide"/>
-                            <Carousel.Caption>
-                                <h3>Third slide label</h3>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                            </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
+    constructor() {
+        super();
+        this.state = {      
+            images: null,
+            index: 0,
+        }
+    }
+
+    async componentDidMount() {
+        await this.fetchData();
+    }
+
+    fetchData = async () => {
+        const response = await api.get("/events");
+        console.log(response.data);
+        this.setState({ images: response.data });
+    }
+
+
+        handleSelect = (selectedIndex, e) => {
+          this.setState({ index: selectedIndex });
+        }
+      
+
+    render() {
+        return (
+            <div id="component-eventos-home">
+                <div className="header-component-eventos-home">
+                    <h1>Eventos Realizados</h1>
+                </div>
+    
+                <div className="content-component-eventos-home">
+                    <Carousel className="carousel-content-component-eventos-home" cellAlig='center'>
+                        <img src={fest1} />
+                        <img src={fest2} />
+                        <img src={fest3} />
+                    </Carousel>
+                </div>
             </div>
-        </div>
-    );
+        );
+    }
 }
 
 export default EventosHome;

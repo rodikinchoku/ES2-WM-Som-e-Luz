@@ -30,10 +30,10 @@ const ContatoHome = () => {
                     </div>
                 </div>
                 <div className="form-content-component-contato-home">
-                    <input type="input" class="item-form-content-component-contato-home" placeholder="Nome"/>
-                    <input type="input" class="item-form-content-component-contato-home" placeholder="Telefone"/>
-                    <input type="input" class="item-form-content-component-contato-home" placeholder="Email"/>
-                    <input type="input" class="text-form-content-component-contato-home" placeholder="Mensagem"/>
+                    <input type="input" className="item-form-content-component-contato-home" placeholder="Nome"/>
+                    <input type="input" className="item-form-content-component-contato-home" placeholder="Telefone"/>
+                    <input type="input" className="item-form-content-component-contato-home" placeholder="Email"/>
+                    <input type="input" className="text-form-content-component-contato-home" placeholder="Mensagem"/>
                     <button className="btn-form-content-component-contato-home">Enviar</button>
                 </div>
                 
